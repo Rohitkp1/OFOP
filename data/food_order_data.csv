@@ -1,0 +1,5 @@
+Age,Marital Status,Occupation,Monthly Income,Educational Qualifications,Family size,Feedback,WillOrderAgain
+25,Single,Student,0,Bachelor,2,Positive,1
+30,Married,Engineer,50000,Master,3,Positive,1
+40,Single,Doctor,80000,PhD,1,Negative,0
+22,Single,Student,0,Bachelor,1,Positive,1

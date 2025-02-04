@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User History</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Prediction History of {{ user.username }}</h1>
+        <nav>
+            <a href="{{ url_for('admin') }}">Back to Admin Panel</a>
+            <a href="{{ url_for('logout') }}">Logout</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>History</h2>
+        {% if history %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Prediction</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for record in history %}
+                    <tr>
+                        <td>{{ record.prediction }}</td>
+                        <td>{{ record.id }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>This user has no prediction history yet.</p>
+        {% endif %}
+    </section>
+</body>
+</html>
